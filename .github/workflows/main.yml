@@ -1,0 +1,7 @@
+name: AND Gate Flow
+  on: push
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - run: echo Hello from GitHub Actions

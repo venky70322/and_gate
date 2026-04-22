@@ -8,5 +8,5 @@ jobs:
       - run: pwd
       - run: ls
       - run: unset VERILATOR_ROOT
-      - run: verilator --binary and_gate.v tb.v
+      - run: verilator -Wall --binary --trace and_gate.v tb.v
       - run: ./obj_dir/Vand_gate

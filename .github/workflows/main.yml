@@ -7,6 +7,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: pwd
       - run: ls
-      - run: unset VERILATOR_ROOT
-      - run: verilator -Wall --binary --trace and_gate.v tb.v
+      - run: unset VERILATOR_ROOT && verilator -Wall --binary --trace and_gate.v tb.v
       - run: ./obj_dir/Vand_gate

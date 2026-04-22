@@ -4,7 +4,9 @@ jobs:
   test:
     runs-on: self-hosted
     steps:
+      - uses: actions/checkout@v4
       - run: pwd
       - run: ls
+      - run: unset VERILATOR_ROOT
       - run: verilator --binary and_gate.v tb.v
       - run: ./obj_dir/Vand_gate

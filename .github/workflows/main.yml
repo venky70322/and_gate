@@ -4,4 +4,7 @@ jobs:
   test:
     runs-on: self-hosted
     steps:
-      - run: echo Hello from GitHub Actions
+      - run: pwd
+      - run: ls
+      - run: verilator --binary and_gate.v tb.v
+      - run: ./obj_dir/Vand_gate
